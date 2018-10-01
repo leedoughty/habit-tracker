@@ -1,13 +1,13 @@
-import React from 'react'
+import { Component } from 'react'
 import '../stylesheets/ui.scss'
 
-export const HabitTracker = React.createClass({
+export class HabitTracker extends Component{
   percentToDecimal(decimal) {
     return ((decimal * 100) + '%')
-  },
+  }
   calcGoalProgress(total, goal) {
     return this.percentToDecimal(total/goal)
-  },
+  }
   render() {
       return (
         <div className="habit-tracker">
@@ -34,4 +34,4 @@ export const HabitTracker = React.createClass({
         </div>
       )
   }
-})
+}
