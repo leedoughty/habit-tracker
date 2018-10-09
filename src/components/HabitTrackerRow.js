@@ -6,9 +6,7 @@ import { PropTypes } from "react";
 export const HabitTrackerRow = ({ activity, date, yes, no }) => (
   <tr>
     <td>
-      {date.getMonth() + 1}/
-      {date.getDate()}/
-      {date.getFullYear()}
+        {date}
     </td>
     <td>{activity}</td>
     <td>{yes ? <MdDone /> : null}</td>
@@ -18,7 +16,7 @@ export const HabitTrackerRow = ({ activity, date, yes, no }) => (
 
 HabitTrackerRow.propTypes = {
   activity: PropTypes.string.isRequired,
-  date: PropTypes.instanceOf(Date).isRequired,
+  date: PropTypes.string.isRequired,
   yes: PropTypes.bool,
   no: PropTypes.bool
 };
